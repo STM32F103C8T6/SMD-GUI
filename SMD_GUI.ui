@@ -1,0 +1,1837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GMX_GUI</class>
+ <widget class="QMainWindow" name="GMX_GUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1800</width>
+    <height>1012</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="Main_window">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_47" stretch="3,7">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="path_display">
+            <property name="text">
+             <string>Current PATH:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLineEdit" name="Filter_line">
+              <property name="placeholderText">
+               <string>Enter folder name to filter</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Clear_filters_button">
+              <property name="text">
+               <string>Clear filters</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTreeView" name="folder_tree_view"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="select_numb_count">
+            <property name="text">
+             <string>Total:          Filtered:          Selected:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="Seting_Tab">
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Run_Step_Interface">
+           <attribute name="title">
+            <string>Run steps</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="2,0,3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QTreeWidget" name="Config_Tree">
+                <property name="autoScroll">
+                 <bool>true</bool>
+                </property>
+                <property name="columnCount">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1,0">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Run Folder List:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="task_folder_select"/>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="Execute_toolButton">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="Run_Step_Task">
+                <property name="text">
+                 <string>Execute the task</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollArea" name="scrollArea">
+              <property name="autoFillBackground">
+               <bool>true</bool>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>720</width>
+                 <height>874</height>
+                </rect>
+               </property>
+               <property name="autoFillBackground">
+                <bool>true</bool>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QToolBox" name="Config_list">
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
+                  <property name="currentIndex">
+                   <number>6</number>
+                  </property>
+                  <widget class="QWidget" name="Config_Move_File">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Distribute task files</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <widget class="QGroupBox" name="Auto_Move_File">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="autoFillBackground">
+                       <bool>true</bool>
+                      </property>
+                      <property name="title">
+                       <string>Automatically assign task files</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_9">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_5">
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="Ligand_endswith_label">
+                           <property name="text">
+                            <string>Ligand File Suffix:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Ligand_endswith">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>.mol2</string>
+                           </property>
+                           <property name="dragEnabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="placeholderText">
+                            <string>.mol2</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_6">
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="protein_endswith_label">
+                           <property name="text">
+                            <string>Receptor File Suffix:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="protein_endswith">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>.pdb</string>
+                           </property>
+                           <property name="dragEnabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="readOnly">
+                            <bool>false</bool>
+                           </property>
+                           <property name="placeholderText">
+                            <string>.pdb</string>
+                           </property>
+                           <property name="clearButtonEnabled">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_38">
+                         <item>
+                          <widget class="QLabel" name="folder_name_index_label">
+                           <property name="text">
+                            <string>Folder Name Index:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="folder_name_index">
+                           <property name="text">
+                            <string>0</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="Copy_receptor">
+                         <property name="title">
+                          <string>Copy the same receptor file</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="checked">
+                          <bool>false</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_11">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_7">
+                            <property name="rightMargin">
+                             <number>1</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="receptor_file_path_label">
+                              <property name="text">
+                               <string>Receptor File Path:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="receptor_file_path">
+                              <property name="enabled">
+                               <bool>false</bool>
+                              </property>
+                              <property name="dragEnabled">
+                               <bool>true</bool>
+                              </property>
+                              <property name="placeholderText">
+                               <string>recepror pdb file path</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Ligand_protein_prep_Seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Prepare ligand receptor files</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_12">
+                      <item>
+                       <widget class="QGroupBox" name="Rename_Ligane">
+                        <property name="title">
+                         <string>Rename ligand file residues</string>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_14">
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_8">
+                           <item>
+                            <widget class="QLabel" name="Ligand_Name_label">
+                             <property name="text">
+                              <string>Unified ligand names</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="Ligand_Name">
+                             <property name="text">
+                              <string>LIG</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>LIG</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="Repair_Receptor">
+                        <property name="title">
+                         <string>Check and repair the receptor file</string>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_16">
+                         <item>
+                          <layout class="QVBoxLayout" name="verticalLayout_15">
+                           <item>
+                            <widget class="QCheckBox" name="Repair_main_chain">
+                             <property name="text">
+                              <string>Repair main chain missing as much as possible</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QCheckBox" name="Repair_missing_side_chain">
+                             <property name="text">
+                              <string>Repair missing side chain atoms</string>
+                             </property>
+                             <property name="checked">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Ligand_top_Seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Generate ligand topology</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_17">
+                    <item>
+                     <widget class="QGroupBox" name="Gen_ligand_top">
+                      <property name="title">
+                       <string>Automatical generation of ligand topology structure</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_18">
+                       <item>
+                        <widget class="QGroupBox" name="Generate_top_by_GAFF">
+                         <property name="title">
+                          <string>Generate molecular topology using GAFF</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout">
+                          <item row="0" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_10">
+                            <item>
+                             <widget class="QLabel" name="Sob_top_PATH_label">
+                              <property name="text">
+                               <string>Sobtop PATH:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Sob_top_PATH"/>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="1" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_15">
+                            <item>
+                             <widget class="QCheckBox" name="IF_rename_ligand">
+                              <property name="text">
+                               <string>Rename the ligand molecule:</string>
+                              </property>
+                              <property name="checked">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Rename_ligand_name">
+                              <property name="text">
+                               <string>LIG</string>
+                              </property>
+                              <property name="placeholderText">
+                               <string>LIG</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="Generate_top_by_CGENFF">
+                         <property name="title">
+                          <string>Generate molecular topology using CGENFF</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="checked">
+                          <bool>false</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_21">
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout_2">
+                            <item row="0" column="0" colspan="4">
+                             <widget class="QLabel" name="CGENFF_web_URL_label">
+                              <property name="text">
+                               <string>CgenFF Web URL:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="4">
+                             <widget class="QLineEdit" name="CGENFF_web_URL">
+                              <property name="text">
+                               <string>https://app.cgenff.com/login</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0" colspan="2">
+                             <widget class="QLabel" name="CGENFF_user_name_abel">
+                              <property name="text">
+                               <string>User Name:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="CGENFF_pw_label">
+                              <property name="text">
+                               <string>PassWord:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0" colspan="3">
+                             <widget class="QCheckBox" name="IF_use_Proxy">
+                              <property name="text">
+                               <string>Use Proxy:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="4">
+                             <widget class="QLineEdit" name="CGENFF_user_name"/>
+                            </item>
+                            <item row="2" column="4">
+                             <widget class="QLineEdit" name="CGENFF_pw"/>
+                            </item>
+                            <item row="3" column="4">
+                             <widget class="QLineEdit" name="Web_Proxy"/>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Protein_top_Seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Generate protein topology</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_24">
+                    <item>
+                     <widget class="QGroupBox" name="Gen_Protein_top">
+                      <property name="title">
+                       <string>Automatically generate protein ligands</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_22">
+                       <property name="rightMargin">
+                        <number>200</number>
+                       </property>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_11">
+                         <item>
+                          <widget class="QLabel" name="Force_Field_selt_label">
+                           <property name="text">
+                            <string>Select Molecular Force Field:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="Force_Field_selt"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_17">
+                         <item>
+                          <widget class="QLabel" name="water_model_selt_label">
+                           <property name="text">
+                            <string>Select water model:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="water_model_selt"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_18">
+                         <item>
+                          <widget class="QLabel" name="N_term_selt_label">
+                           <property name="text">
+                            <string>Select the N-terminal protonation state:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="N_term_selt"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_19">
+                         <item>
+                          <widget class="QLabel" name="C_term_selt_label">
+                           <property name="text">
+                            <string>Select the C-terminal protonation state:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="C_term_selt"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="Morge_complex_gro">
+                      <property name="title">
+                       <string>Automatically check and merge top files and automatically generate complex.gro files</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_23">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_20">
+                         <property name="rightMargin">
+                          <number>200</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="merge_top_file_ff_selt_label">
+                           <property name="text">
+                            <string>Force Field Used</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="merge_top_file_ff_selt"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Solvation_box_seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Generate Solvation Box</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_26">
+                    <item>
+                     <widget class="QGroupBox" name="Gen_Solvation_box">
+                      <property name="title">
+                       <string>Automatically generate solvation boxes</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_4">
+                       <property name="rightMargin">
+                        <number>350</number>
+                       </property>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="Box_size_set_label">
+                         <property name="text">
+                          <string>Box size distace(A)</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QComboBox" name="Box_shape_sele"/>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="Box_size_set">
+                         <property name="text">
+                          <string>10</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>10</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="Box_shape_sele_label">
+                         <property name="text">
+                          <string>Box shape</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="Add_ions_to_box">
+                      <property name="title">
+                       <string>Automatically add ions to the box</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_27" stretch="2,3">
+                       <property name="sizeConstraint">
+                        <enum>QLayout::SizeConstraint::SetFixedSize</enum>
+                       </property>
+                       <item>
+                        <widget class="QGroupBox" name="Neutralize_System">
+                         <property name="title">
+                          <string>Ion placement</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>false</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_28">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_12">
+                            <property name="rightMargin">
+                             <number>150</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_16">
+                              <property name="text">
+                               <string>Neutralize by addine</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="add_positive_set"/>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="add_negative_set"/>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_17">
+                              <property name="text">
+                               <string>ions</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="Add_salt_density">
+                         <property name="title">
+                          <string>Add salt</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="checked">
+                          <bool>false</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_29">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0">
+                            <property name="rightMargin">
+                             <number>330</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="Salt_density_set_label">
+                              <property name="text">
+                               <string>Salt concentration:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Salt_density_set"/>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_19">
+                              <property name="text">
+                               <string>M</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="0,2">
+                            <property name="rightMargin">
+                             <number>350</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="selt_positive_ion_label">
+                              <property name="text">
+                               <string>Salt positive ion:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="selt_positive_ion"/>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="0,2">
+                            <property name="rightMargin">
+                             <number>350</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="selt_negatibe_ion_label">
+                              <property name="text">
+                               <string>Salt negative ion:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="selt_negatibe_ion"/>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="EM_NVT_NPT_seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Energy minimization and system balance</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_30">
+                    <item>
+                     <widget class="QGroupBox" name="Auto_balance">
+                      <property name="title">
+                       <string>Automatic energy minimization and NVT, NPT</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_31" stretch="0,0,0,1">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_21">
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="Ligand_name_set_label">
+                           <property name="text">
+                            <string>Ligand name</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Ligand_name_set">
+                           <property name="text">
+                            <string>LIG</string>
+                           </property>
+                           <property name="placeholderText">
+                            <string>LIG</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="EM_Seting">
+                         <property name="title">
+                          <string>Energy minimization</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_32">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_22">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="EM_steps_label">
+                              <property name="text">
+                               <string>Max setps:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="EM_steps">
+                              <property name="text">
+                               <string>2000</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_26">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="EM_rvdw_label">
+                              <property name="text">
+                               <string>Default rvdw(nm):</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="EM_rvdw">
+                              <property name="text">
+                               <string>1.2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QCheckBox" name="EM_extend_rvdw">
+                              <property name="text">
+                               <string>Extend rvdw if run fails</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_30">
+                            <item>
+                             <widget class="QCheckBox" name="Check_custom_EM_mdp">
+                              <property name="text">
+                               <string>Using custom mdp parameters</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Custom_EM_mdp">
+                              <property name="placeholderText">
+                               <string>mdp file path</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="NVT_Seting">
+                         <property name="title">
+                          <string>NVT</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_33">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_23">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NVT_step_label">
+                              <property name="text">
+                               <string>Steps:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NVT_step">
+                              <property name="text">
+                               <string>50000</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_24">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NVT_rvdw_label">
+                              <property name="text">
+                               <string>Default rvdw(nm):</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NVT_rvdw">
+                              <property name="text">
+                               <string>1.2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QCheckBox" name="NVT_extend_rvdw">
+                              <property name="text">
+                               <string>Extend rvdw if run fails</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_25">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NVT_Tem_label">
+                              <property name="text">
+                               <string>Temperature(K):</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NVT_Tem">
+                              <property name="text">
+                               <string>300</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_31">
+                            <item>
+                             <widget class="QCheckBox" name="Check_custum_NVT_file">
+                              <property name="text">
+                               <string>Using custom mdp parameters</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NVT_mdp_file">
+                              <property name="placeholderText">
+                               <string>mdp file path</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="NPT_Seting">
+                         <property name="title">
+                          <string>NPT</string>
+                         </property>
+                         <property name="flat">
+                          <bool>false</bool>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_34">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_27">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NPT_Setps_labe">
+                              <property name="text">
+                               <string>Steps:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NPT_Setps">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                <horstretch>200</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <property name="text">
+                               <string>50000</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_28">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NPT_rvdw_label">
+                              <property name="text">
+                               <string>Default rvdw(nm):</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NPT_rvdw">
+                              <property name="text">
+                               <string comment="1.2">1.2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QCheckBox" name="NPT_extend_rvdw">
+                              <property name="text">
+                               <string>Extend rvdw if run fails</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_29">
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="NPT_pres_label">
+                              <property name="text">
+                               <string>Pressure(bar):</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NPT_pres">
+                              <property name="text">
+                               <string>1.0</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_32">
+                            <item>
+                             <widget class="QCheckBox" name="Check_NPT_mdp_file">
+                              <property name="text">
+                               <string>Using custom mdp parameters</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="NPT_mdp_file_path">
+                              <property name="placeholderText">
+                               <string>mdp file path</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="SMD_MD_Seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Perform SMD or MD calculations</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_35" stretch="1,2">
+                    <property name="sizeConstraint">
+                     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+                    </property>
+                    <item>
+                     <widget class="QGroupBox" name="Run_SMD">
+                      <property name="title">
+                       <string>Run SMD</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_10">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_39">
+                         <property name="rightMargin">
+                          <number>300</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_2">
+                           <property name="text">
+                            <string>Ligand name</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Ligand_name_set_2"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_33">
+                         <property name="rightMargin">
+                          <number>300</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_32">
+                           <property name="text">
+                            <string>Run</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="SMD_Cycle_numb">
+                           <property name="text">
+                            <string>3</string>
+                           </property>
+                           <property name="placeholderText">
+                            <string>3</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="SMD_Cycle_numb_label">
+                           <property name="text">
+                            <string>replicates per molecule</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="Check_rm_xtc_file">
+                         <property name="text">
+                          <string>Delete the trajectory file after running</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="Run_MD">
+                      <property name="title">
+                       <string>Run MD</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_25">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_40">
+                         <property name="rightMargin">
+                          <number>300</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_3">
+                           <property name="text">
+                            <string>Ligand name</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Ligand_name_set_3"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_42">
+                         <item>
+                          <widget class="QLabel" name="MD_Time_label">
+                           <property name="text">
+                            <string>Total time(ns):</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="MD_Time">
+                           <property name="placeholderText">
+                            <string>1</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_43">
+                         <item>
+                          <widget class="QLabel" name="MD_Time_Step_label">
+                           <property name="text">
+                            <string>Time step(fs):</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="MD_Time_Step">
+                           <property name="text">
+                            <string>2</string>
+                           </property>
+                           <property name="placeholderText">
+                            <string>2</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_44">
+                         <item>
+                          <widget class="QLabel" name="Recording_interval">
+                           <property name="text">
+                            <string>Recording interval(ps):</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="Trajectory_label">
+                           <property name="text">
+                            <string>Trajectory:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Trajectory_Recording"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="Energy_label">
+                           <property name="text">
+                            <string>Energy:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Energy_Recording"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_46">
+                         <item>
+                          <widget class="QLabel" name="Frame_Export_label">
+                           <property name="text">
+                            <string>Approximate number of frames:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="Frame_Export">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="placeholderText">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_45">
+                         <item>
+                          <widget class="QLabel" name="MD_Cutoff_Rafius_label">
+                           <property name="text">
+                            <string>Cutoff rafius(A):</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="MD_Cutoff_Rafius">
+                           <property name="text">
+                            <string>9</string>
+                           </property>
+                           <property name="placeholderText">
+                            <string>9</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_37">
+                         <item>
+                          <widget class="QCheckBox" name="check_custum_mdp_file">
+                           <property name="text">
+                            <string>Using custom mdp parameters</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="md_mdp_file_path"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Server_list_Seting">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>702</width>
+                     <height>600</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Calculation server selection</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_34">
+                    <item>
+                     <widget class="QGroupBox" name="Server_Seting">
+                      <property name="title">
+                       <string>Distribute tasks to servers</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_35">
+                       <item>
+                        <widget class="QGroupBox" name="EM_Server_list">
+                         <property name="title">
+                          <string>EM Server</string>
+                         </property>
+                         <property name="flat">
+                          <bool>false</bool>
+                         </property>
+                         <property name="checkable">
+                          <bool>false</bool>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_37">
+                          <item>
+                           <widget class="QListWidget" name="EM_Server_Slect_List"/>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Select_all_EM_Server">
+                            <property name="text">
+                             <string>Select all</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Clear_all_EM_Server">
+                            <property name="text">
+                             <string>Clear all</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="NVT_Server_list">
+                         <property name="title">
+                          <string>NVT Server</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_38">
+                          <item>
+                           <widget class="QListWidget" name="NVT_Server_Slect_List"/>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Select_all_NVT_Server">
+                            <property name="text">
+                             <string>Select all</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Clear_all_NVT_Server">
+                            <property name="text">
+                             <string>Clear all</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="NPT_Server_list">
+                         <property name="title">
+                          <string>NPT Server</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_39">
+                          <item>
+                           <widget class="QListWidget" name="NPT_Server_Slect_List"/>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Select_all_NPT_Server_list">
+                            <property name="text">
+                             <string>Select all</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Clear_all_NPT_Server_list">
+                            <property name="text">
+                             <string>Clear all</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="SMD_Server_list">
+                         <property name="title">
+                          <string>SMD Server</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_41">
+                          <item>
+                           <widget class="QListWidget" name="SMD_Server_Slect_List"/>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Select_all_SMD_Server_list">
+                            <property name="text">
+                             <string>Select all</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Clear_all_SMD_Server_list">
+                            <property name="text">
+                             <string>Clear all</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="MD_Server_list">
+                         <property name="title">
+                          <string>MD Server</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_42">
+                          <item>
+                           <widget class="QListWidget" name="MD_Server_Slect_List"/>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Select_all_MD_Server_list">
+                            <property name="text">
+                             <string>Select all</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="Cler_all_MD_Server_list">
+                            <property name="text">
+                             <string>Clear all</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="run_command">
+           <attribute name="title">
+            <string>Run Command</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QTextBrowser" name="Log_Monitor"/>
+              </item>
+              <item>
+               <widget class="QProgressBar" name="progressBar">
+                <property name="value">
+                 <number>100</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QComboBox" name="Host_Select_Combo"/>
+              </item>
+              <item>
+               <widget class="QComboBox" name="Folder_Path_Select_Combo"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="Command_line"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="Run_Command_Button">
+                <property name="text">
+                 <string>Run</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Result_Summary">
+           <attribute name="title">
+            <string>Result Summary</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_20">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_19">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="text">
+                   <string>Load summary of results</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="text">
+                   <string>Rerun the results analysis</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="tabWidget">
+              <property name="tabPosition">
+               <enum>QTabWidget::TabPosition::West</enum>
+              </property>
+              <property name="tabShape">
+               <enum>QTabWidget::TabShape::Rounded</enum>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <property name="movable">
+               <bool>true</bool>
+              </property>
+              <property name="tabBarAutoHide">
+               <bool>false</bool>
+              </property>
+              <widget class="QWidget" name="tab_3">
+               <attribute name="title">
+                <string>Overview</string>
+               </attribute>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="folder_tree_collapse">
+          <property name="text">
+           <string>Collapse All</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Clear_Selection">
+          <property name="text">
+           <string>Clear All Selections</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Refresh_Button">
+          <property name="text">
+           <string>refrash</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Clear_Log_Button">
+          <property name="text">
+           <string>Clear Log</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menubar_file">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionChange_working_path"/>
+   </widget>
+   <widget class="QMenu" name="menubar_config">
+    <property name="title">
+     <string>Config</string>
+    </property>
+    <addaction name="actionDefault_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menubar_info">
+    <property name="title">
+     <string>Info</string>
+    </property>
+   </widget>
+   <addaction name="menubar_file"/>
+   <addaction name="menubar_config"/>
+   <addaction name="menubar_info"/>
+  </widget>
+  <action name="actionChange_working_path">
+   <property name="text">
+    <string>Change Working PATH</string>
+   </property>
+  </action>
+  <action name="actionDefault_Settings">
+   <property name="text">
+    <string>Default Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

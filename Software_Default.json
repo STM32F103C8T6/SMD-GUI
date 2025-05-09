@@ -1,0 +1,67 @@
+{
+    "Ligand_endswith": ".mol2",
+    "protein_endswith": ".pdb",
+    "Ligand_Name": "LIG",
+    "Force_Field": [
+        "AMBER14SB_parmbsc1",
+        "CHARMM all-atom force field"
+    ],
+    "water_model": [
+        "TIP4P",
+        "TIP3P",
+        "SPC"
+    ],
+    "N_term": [
+        "NH3+"
+    ],
+    "C_term": [
+        "COO-"
+    ],
+    "Box_shape": [
+        "dodecahedron",
+        "cubic",
+        "octahedron"
+    ],
+    "Box_size": 10,
+    "Neutralize_positive_ions": [
+        "NA",
+        "LI",
+        "K"
+    ],
+    "Neutralize_negative_ions": [
+        "CL",
+        "Br",
+        "I",
+        "F"
+    ],
+    "positive_ions": [
+        "NA",
+        "CA",
+        "LI",
+        "K",
+        "Zn",
+        "MG"
+    ],
+    "negative_ions": [
+        "CL",
+        "Br",
+        "I",
+        "F"
+    ],
+    "Salt_density": 0.15,
+    "EM_steps": 2000,
+    "EM_rvdw": 1.2,
+    "NVT_step": 50000,
+    "NVT_rvdw": 1.2,
+    "NVT_Tem": 300,
+    "NPT_Setps": 50000,
+    "NPT_rvdw": 1.2,
+    "NPT_pres": 1.0,
+    "SMD_Cycle_numb": 3,
+    "MD_Time": 10,
+    "MD_Time_Step": 2,
+    "Frame_Export": 1000,
+    "Trajectory_Recording": 5000,
+    "Energy_Recording": 5000,
+    "MD_Cutoff_Rafius": 9
+}

@@ -1,0 +1,13 @@
+{
+    "Sob_top_PATH": "/home/sxc/nfsroot/PDBbind/sobtop_1.0",
+    "CGENFF_web_URL": "https://app.cgenff.com/login",
+    "CGENFF_user_name": "20225226003@stu.suda.edu.cn",
+    "CGENFF_pw": "Sxc07224819",
+    "Web_Proxy": "http://127.0.0.1:%mixedPort%",
+    "Custom_EM_mdp": "/home/sxc/Server/MolecularDynamics/PHIP_chemdiv/md_file/em.mdp",
+    "NVT_mdp_file": "/home/sxc/nfsroot/PDBbind/md_file/nvt.mdp",
+    "NPT_mdp_file_path": "/home/sxc/nfsroot/PDBbind/md_file/npt.mdp",
+    "md_mdp_file_path": "/home/sxc/Server/MolecularDynamics/PHIP_chemdiv/md_file/md.mdp",
+    "gmx_python_path": "/home/sxc/miniconda3/envs/gmx/bin/python",
+    "charmm_force_file_folder_path": "/home/sxc/Server/MolecularDynamics/PHIP_chemdiv/ChemDev_purchased_list/charmm36_ljpme-jul2022.ff"
+}
